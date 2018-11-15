@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Toradex_CE800">
+      <Configuration>Debug</Configuration>
+      <Platform>Toradex_CE800</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Toradex_CE800">
+      <Configuration>Release</Configuration>
+      <Platform>Toradex_CE800</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{d41eb5ae-cdfa-4442-8e92-6b00167ef5ef}</ProjectGuid>
+    <RootNamespace>specFW2</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>specFW2</ProjectName>
+    <EnableRedirectPlatform>true</EnableRedirectPlatform>
+    <RedirectPlatformValue>Toradex_CE800</RedirectPlatformValue>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Toradex_CE800'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>CE800</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Toradex_CE800'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>CE800</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Toradex_CE800'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Toradex_CE800'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Toradex_CE800'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Toradex_CE800'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Toradex_CE800'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/D "DEBUG" /D "STANDARDSHELL_UI_MODEL" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Manifest>
+      <EnableDPIAwareness>false</EnableDPIAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Toradex_CE800'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WINDOWS;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/D "STANDARDSHELL_UI_MODEL" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;STANDARDSHELL_UI_MODEL;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Manifest>
+      <EnableDPIAwareness>false</EnableDPIAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CameraIOFunctions.h" />
+    <ClInclude Include="CommandServer.h" />
+    <ClInclude Include="debug.h" />
+    <ClInclude Include="FileDefs.h" />
+    <ClInclude Include="FileInfo.h" />
+    <ClInclude Include="FileVersionInfo.h" />
+    <ClInclude Include="flash.h" />
+    <ClInclude Include="GetVersions.h" />
+    <ClInclude Include="Hardware.h" />
+    <ClInclude Include="heat.h" />
+    <ClInclude Include="IOFunctions.h" />
+    <ClInclude Include="KillSubscriber.h" />
+    <ClInclude Include="module_ver.h" />
+    <ClInclude Include="newres.h" />
+    <ClInclude Include="ParserThread.h" />
+    <ClInclude Include="product_ver.h" />
+    <ClInclude Include="socketbase.h" />
+    <ClInclude Include="specFW2.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SpecFWDlg.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TcpServer.h" />
+    <ClInclude Include="temp.h" />
+    <ClInclude Include="watchdog.h" />
+    <ClInclude Include="Zodiac.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CameraIOFunctions.cpp" />
+    <ClCompile Include="cfghdwr.cpp" />
+    <ClCompile Include="cfgmisc.cpp" />
+    <ClCompile Include="cfgsys.cpp" />
+    <ClCompile Include="check_temps.cpp" />
+    <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="cmd0c.cpp" />
+    <ClCompile Include="cmd0h.cpp" />
+    <ClCompile Include="cmd1d.cpp" />
+    <ClCompile Include="cmd1h.cpp" />
+    <ClCompile Include="cmd1v.cpp" />
+    <ClCompile Include="cmd2d.cpp" />
+    <ClCompile Include="cmd2v.cpp" />
+    <ClCompile Include="cmd3t.cpp" />
+    <ClCompile Include="cmd3V.cpp" />
+    <ClCompile Include="cmd4V.cpp" />
+    <ClCompile Include="cmd5V.cpp" />
+    <ClCompile Include="cmdaz.cpp" />
+    <ClCompile Include="cmdbm.cpp" />
+    <ClCompile Include="cmdc0.cpp" />
+    <ClCompile Include="cmdc1.cpp" />
+    <ClCompile Include="cmdc2.cpp" />
+    <ClCompile Include="cmdcd.cpp" />
+    <ClCompile Include="cmdch.cpp" />
+    <ClCompile Include="cmdcm.cpp" />
+    <ClCompile Include="cmdct.cpp" />
+    <ClCompile Include="cmdcx.cpp" />
+    <ClCompile Include="cmdd0.cpp" />
+    <ClCompile Include="cmdd1.cpp" />
+    <ClCompile Include="cmdd2.cpp" />
+    <ClCompile Include="cmddc.cpp" />
+    <ClCompile Include="cmdde.cpp" />
+    <ClCompile Include="cmddf.cpp" />
+    <ClCompile Include="cmddm.cpp" />
+    <ClCompile Include="cmdds.cpp" />
+    <ClCompile Include="cmdec.cpp" />
+    <ClCompile Include="cmdes.cpp" />
+    <ClCompile Include="cmdf1.cpp" />
+    <ClCompile Include="cmdfc.cpp" />
+    <ClCompile Include="cmdfm.cpp" />
+    <ClCompile Include="cmdGB.cpp" />
+    <ClCompile Include="cmdgc.cpp" />
+    <ClCompile Include="cmdgd.cpp" />
+    <ClCompile Include="cmdge.cpp" />
+    <ClCompile Include="cmdgg.cpp" />
+    <ClCompile Include="cmdgl.cpp" />
+    <ClCompile Include="cmdgm.cpp" />
+    <ClCompile Include="cmdgs.cpp" />
+    <ClCompile Include="cmdgt.cpp" />
+    <ClCompile Include="cmdgv.cpp" />
+    <ClCompile Include="cmdh1.cpp" />
+    <ClCompile Include="cmdhg.cpp" />
+    <ClCompile Include="cmdhk.cpp" />
+    <ClCompile Include="cmdhm.cpp" />
+    <ClCompile Include="cmdho.cpp" />
+    <ClCompile Include="cmdhr.cpp" />
+    <ClCompile Include="cmdhz.cpp" />
+    <ClCompile Include="cmdi1.cpp" />
+    <ClCompile Include="cmdi2.cpp" />
+    <ClCompile Include="cmdi3.cpp" />
+    <ClCompile Include="cmdi4.cpp" />
+    <ClCompile Include="cmdid.cpp" />
+    <ClCompile Include="cmdis.cpp" />
+    <ClCompile Include="cmdit.cpp" />
+    <ClCompile Include="cmdkz.cpp" />
+    <ClCompile Include="cmdlc.cpp" />
+    <ClCompile Include="cmdll.cpp" />
+    <ClCompile Include="cmdlm.cpp" />
+    <ClCompile Include="cmdlp.cpp" />
+    <ClCompile Include="cmdmc.cpp" />
+    <ClCompile Include="cmdmd.cpp" />
+    <ClCompile Include="cmdmm.cpp" />
+    <ClCompile Include="cmdmw.cpp" />
+    <ClCompile Include="cmdmz.cpp" />
+    <ClCompile Include="cmdnz.cpp" />
+    <ClCompile Include="cmdoh.cpp" />
+    <ClCompile Include="cmdpi.cpp" />
+    <ClCompile Include="cmdpk.cpp" />
+    <ClCompile Include="cmdpm.cpp" />
+    <ClCompile Include="cmdpz.cpp" />
+    <ClCompile Include="cmdqz.cpp" />
+    <ClCompile Include="cmdrb.cpp" />
+    <ClCompile Include="cmdrc.cpp" />
+    <ClCompile Include="cmdrd.cpp" />
+    <ClCompile Include="cmdRead.cpp" />
+    <ClCompile Include="cmdRF.cpp" />
+    <ClCompile Include="cmdri.cpp" />
+    <ClCompile Include="cmdRM.cpp" />
+    <ClCompile Include="cmdro.cpp" />
+    <ClCompile Include="cmdrr.cpp" />
+    <ClCompile Include="cmdsc.cpp" />
+    <ClCompile Include="cmdsd.cpp" />
+    <ClCompile Include="cmdse.cpp" />
+    <ClCompile Include="cmdsg.cpp" />
+    <ClCompile Include="cmdsi.cpp" />
+    <ClCompile Include="cmdsl.cpp" />
+    <ClCompile Include="cmdsm.cpp" />
+    <ClCompile Include="cmdsr.cpp" />
+    <ClCompile Include="cmdst.cpp" />
+    <ClCompile Include="cmdsx.cpp" />
+    <ClCompile Include="cmdsy.cpp" />
+    <ClCompile Include="cmdSZ.cpp" />
+    <ClCompile Include="cmdtc.cpp" />
+    <ClCompile Include="cmdtm.cpp" />
+    <ClCompile Include="cmdtr.cpp" />
+    <ClCompile Include="cmdtx.cpp" />
+    <ClCompile Include="cmdum.cpp" />
+    <ClCompile Include="cmduz.cpp" />
+    <ClCompile Include="cmdvc.cpp" />
+    <ClCompile Include="cmdvm.cpp" />
+    <ClCompile Include="cmdvt.cpp" />
+    <ClCompile Include="cmdvv.cpp" />
+    <ClCompile Include="cmdWB.cpp" />
+    <ClCompile Include="cmdWE.cpp" />
+    <ClCompile Include="cmdxx.cpp" />
+    <ClCompile Include="cmdxz.cpp" />
+    <ClCompile Include="Coarse.cpp" />
+    <ClCompile Include="CommandServer.cpp" />
+    <ClCompile Include="CommandServerCmds.cpp" />
+    <ClCompile Include="Convert.cpp" />
+    <ClCompile Include="convert2temp.cpp" />
+    <ClCompile Include="Decoder.cpp" />
+    <ClCompile Include="delay.cpp" />
+    <ClCompile Include="Errormsg.cpp" />
+    <ClCompile Include="FileInfo.cpp" />
+    <ClCompile Include="FileVersionInfo.cpp" />
+    <ClCompile Include="GetCPLDVersion.cpp" />
+    <ClCompile Include="GetFPGADetectorVersion.cpp" />
+    <ClCompile Include="GetKernelVersion.cpp" />
+    <ClCompile Include="GetPersonalityVersion.cpp" />
+    <ClCompile Include="Getstat.cpp" />
+    <ClCompile Include="Getstat2.cpp" />
+    <ClCompile Include="GetTECoolerTemperature.cpp" />
+    <ClCompile Include="HeaterThread.cpp" />
+    <ClCompile Include="InitThread.cpp" />
+    <ClCompile Include="IOFunctions.cpp" />
+    <ClCompile Include="KillSubscriber.cpp" />
+    <ClCompile Include="limit.cpp" />
+    <ClCompile Include="MiscellaneousConstants.cpp" />
+    <ClCompile Include="Motor.cpp" />
+    <ClCompile Include="MotorTables.cpp" />
+    <ClCompile Include="OpticsThread.cpp" />
+    <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="ParserThread.cpp" />
+    <ClCompile Include="ReadThread.cpp" />
+    <ClCompile Include="ServoControl.cpp" />
+    <ClCompile Include="socketbase.cpp" />
+    <ClCompile Include="specFW2.cpp" />
+    <ClCompile Include="SpecFWDlg.cpp" />
+    <ClCompile Include="SpecLog.cpp" />
+    <ClCompile Include="StatusThread.cpp" />
+    <ClCompile Include="StatusThreadUV.cpp" />
+    <ClCompile Include="StatusThreadVIS.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Toradex_CE800'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Toradex_CE800'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TcpServer.cpp" />
+    <ClCompile Include="TECoolerTemperatureTable.cpp" />
+    <ClCompile Include="VegaDetector.cpp" />
+    <ClCompile Include="WriteLogEntry.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="specFW2.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\specFW2.ico" />
+    <Image Include="res\specFW2Doc.ico" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\Toolbar256.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\specFW2.rc2" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
